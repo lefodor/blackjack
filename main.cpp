@@ -7,7 +7,7 @@ using namespace std ;
 int main(){
 
     while(true){
-        // menu
+        // menu m
         menu() ;
         
         // create players
