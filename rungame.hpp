@@ -4,6 +4,7 @@
 
 void title();
 int menu() ;
+int rungame();
 
 
 #endif //RUNGAME_H

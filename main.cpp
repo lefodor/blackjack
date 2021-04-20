@@ -1,10 +1,14 @@
 #include <iostream>
+#include <time.h>
 #include "empty.hpp"
 #include "utils.hpp"
 #include "rungame.hpp"
 using namespace std ;
 
 int main(){
+
+    /// set random number generator
+    srand(time(NULL)); /// initialize only once in application!!!
 
     while(true){
         // menu m

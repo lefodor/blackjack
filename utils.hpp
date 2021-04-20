@@ -11,4 +11,6 @@ int converterStringToInt() ;
 bool checkSize(int, int);
 bool checkBoardPos(int, char*);
 
+int genValue();
+
 #endif //UTILS_H

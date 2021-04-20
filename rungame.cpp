@@ -70,3 +70,8 @@ int menu(){
         }while(!(uinp_s=="1" || uinp_s=="2"));
         return EXIT_SUCCESS;
 };
+
+int rungame() {
+
+    return 0;
+}

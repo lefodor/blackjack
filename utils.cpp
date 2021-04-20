@@ -33,3 +33,15 @@ bool checkBoardPos(int s, char* chi){
     }
     return true ;
 }
+
+int genValue() {
+    int drawn = rand() % 13; 
+    switch (drawn) {
+    case 1: return 11; break;
+    case 10: return 10; break;
+    case 11: return 10; break;
+    case 12: return 10; break;
+    case 13: return 10; break;
+    default: return drawn; break;
+    }
+}
