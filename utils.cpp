@@ -16,26 +16,8 @@ int converterStringToInt(){
     return var_i ;
 };
 
-bool checkSize(int p, int s){
-    if( p+s>10 ) {
-        std::cout << "too big" << std::endl ;
-        return false ;
-    }
-    return true ;
-}
-
-bool checkBoardPos(int s, char* chi){
-    for(int i=0;i<s;i++){
-        if( chi[i] !='.' ){
-            std::cout << "not good" << std::endl ;
-            return false ;
-        }
-    }
-    return true ;
-}
-
 int genValue() {
-    int drawn = rand() % 13; 
+    int drawn = rand() % 13 + 1; 
     switch (drawn) {
     case 1: return 11; break;
     case 10: return 10; break;
