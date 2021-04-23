@@ -1,7 +1,7 @@
 #include "Card.hpp"
 
-Card::Card(const char s, const int v) : suit(s), value(v) {};
+Card::Card(char s, int v) : suit(s), value(v) { };
 
-int Card::getValue() {
+int Card::getValue() const {
 	return value;
 };

@@ -27,3 +27,7 @@ int genValue() {
     default: return drawn; break;
     }
 }
+
+int genValue(int v) {
+    return rand() % v + 1;
+}

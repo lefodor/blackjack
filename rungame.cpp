@@ -1,5 +1,6 @@
 #include "rungame.hpp"
 #include "utils.hpp"
+#include "Player.hpp"
 
 void title(){
     const int cols = 60 ;
@@ -71,7 +72,23 @@ int menu(){
         return EXIT_SUCCESS;
 };
 
-int rungame() {
+int rungame(Player& p, Player& d, CardDeck& cd) {
+    // get first cards x2
+    
+    // player's turn draw additional card
+        // take 2 cards from cardsindeck and put them to cardsnotindeck
+        // add the 2 cards to Player's cardsinhand
+    for (int i = 0; i < 2; i++) {
+        p.addCard(cd[genValue(cd.indeckSize())]);
+    }
+    // std::cout << "value in hand:" << p.getValueInHand() << std::endl;
+
+    // check if player at 21 
+        // --> if yes, player wins
+        // --> if above, player busts
+        // --> else player game continues
+
+    // dealers turn
 
     return 0;
 }

@@ -12,5 +12,6 @@ bool checkSize(int, int);
 bool checkBoardPos(int, char*);
 
 int genValue();
+int genValue(int);
 
 #endif //UTILS_H

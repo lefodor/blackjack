@@ -144,6 +144,7 @@
     <ClCompile Include="Card.cpp" />
     <ClCompile Include="CardDeck.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Player.cpp" />
     <ClCompile Include="rungame.cpp" />
     <ClCompile Include="utils.cpp" />
   </ItemGroup>
@@ -151,6 +152,7 @@
     <ClInclude Include="Card.hpp" />
     <ClInclude Include="CardDeck.hpp" />
     <ClInclude Include="empty.hpp" />
+    <ClInclude Include="Player.hpp" />
     <ClInclude Include="rungame.hpp" />
     <ClInclude Include="utils.hpp" />
   </ItemGroup>
