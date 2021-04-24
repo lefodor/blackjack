@@ -29,5 +29,5 @@ int genValue() {
 }
 
 int genValue(int v) {
-    return rand() % v + 1;
+    return rand() % v ;
 }

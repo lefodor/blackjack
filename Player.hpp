@@ -14,5 +14,6 @@ public:
 	int getValueInHand();
 	void showHand();
 	bool chkBust();
+	bool chk21();
 };
 

@@ -18,7 +18,7 @@ int main(){
     cout << deck1.indeckSize() << endl;
     cout << deck1.notindeckSize() << endl;
 
-    //while(true){
+    while(true){
         // menu 
         menu() ;
         
@@ -33,6 +33,6 @@ int main(){
         //if( rungame() ){
         //    return 0 ;
         //} ;
-    //};
+    };
     return 0 ;
 }

@@ -34,3 +34,7 @@ void Player::showHand() {
 bool Player::chkBust() {
 	return getValueInHand() > 21 ? true : false;
 }
+
+bool Player::chk21() {
+	return getValueInHand() == 21 ? true : false;
+}
