@@ -72,23 +72,61 @@ int menu(){
         return EXIT_SUCCESS;
 };
 
-int rungame(Player& p, Player& d, CardDeck& cd) {
-    // get first cards x2
-    
-    // player's turn draw additional card
-        // take 2 cards from cardsindeck and put them to cardsnotindeck
-        // add the 2 cards to Player's cardsinhand
-    for (int i = 0; i < 2; i++) {
-        p.addCard(cd[genValue(cd.indeckSize())]);
+int anyBusts(Player& p, Player& d) {
+    if (p.chkBust() && d.chkBust()) {
+        std::cout << "Dealer and Player got bust!!!";
+        return 1;
     }
-    // std::cout << "value in hand:" << p.getValueInHand() << std::endl;
+    if (p.chkBust() && !d.chkBust()) {
+        std::cout << "Player got bust!!! Dealer wins...";
+        return 2;
+    }
+    if (!p.chkBust() && d.chkBust()) {
+        std::cout << "Dealer got bust!!! Player wins...";
+        return 3;
+    }
+    if (!p.chkBust() && !d.chkBust()) {
+        return 0;
+    }
+}
 
-    // check if player at 21 
-        // --> if yes, player wins
-        // --> if above, player busts
-        // --> else player game continues
+int rungame(Player& p, Player& d, CardDeck& cd) {
+    int round = 0;
+    bool endgame = false;
+    do {
+        // player's turn draw additional card
+            // take 2 cards from cardsindeck and put them to cardsnotindeck
+            // add the 2 cards to Player's cardsinhand
+        int cardsToDrawn = round == 0 ? 2 : 1;
+        for (int i = 0; i < cardsToDrawn; i++) {
+            p.addCard(cd[genValue(cd.indeckSize())]);
+        }
 
-    // dealers turn
+        // dealers first two cards
+        for (int i = 0; i < cardsToDrawn; i++) {
+            d.addCard(cd[genValue(cd.indeckSize())]);
+        }
+
+        // show dealer's hand
+        std::cout << "dealer:" << std::endl;
+        d.showHand();
+
+        // show player's hand
+        std::cout << "player:" << std::endl;
+        p.showHand();
+
+        // check if player at 21 
+            // --> if yes, player wins
+            // --> if above, player busts
+            // --> else player game continues
+        if (anyBusts(p, d) != 0) {
+            endgame = true;
+        }
+
+        // increment round
+        round++;
+
+    } while (!endgame);
 
     return 0;
 }

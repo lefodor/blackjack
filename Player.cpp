@@ -1,3 +1,4 @@
+#include <iostream>
 #include "Player.hpp"
 
 void Player::setDrawnValue(int v) {
@@ -17,5 +18,19 @@ int Player::getValueInHand() {
 };
 
 void Player::showHand() {
-	
+	int i = 0;
+	std::cout 
+		<< "\t" << "value in hand: "
+		<< getValueInHand() << std::endl;
+	for (auto c : cardsinhand) {
+		i++;
+		std::cout 
+			<< "\t" << "card#" << i << " "
+			<< c->getSuit() << c->getValue()
+			<< std::endl;
+	}
+}
+
+bool Player::chkBust() {
+	return getValueInHand() > 21 ? true : false;
 }

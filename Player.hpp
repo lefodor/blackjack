@@ -13,5 +13,6 @@ public:
 	void addCard(Card*);
 	int getValueInHand();
 	void showHand();
+	bool chkBust();
 };
 

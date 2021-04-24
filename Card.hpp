@@ -7,4 +7,5 @@ private:
 public:
 	Card(char, int);
 	int getValue() const;
+	char getSuit() const;
 };

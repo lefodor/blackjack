@@ -7,6 +7,7 @@
 void title();
 int menu() ;
 int rungame(Player&, Player&, CardDeck&);
+int anyBusts(Player&, Player&);
 
 
 #endif //RUNGAME_H
